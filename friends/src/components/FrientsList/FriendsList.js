@@ -25,7 +25,7 @@ const FriendsList = () => {
   const getData = () => {
     const authAxios = axiosWithAuth();
     authAxios.get(`http://localhost:5000/api/friends`).then(res => {
-      console.log(res.data);
+      console.log("res", res.data);
       setFriends(res.data);
     });
   };
