@@ -20,10 +20,10 @@ const LoginForm = () => {
       .post(`http://localhost:5000/api/login`, { username, password })
       .then(res => {
         console.log("response", res);
-        // const { data } = res;
+        const { data } = res;
 
-        // sessionStorage.setItem("token", data.payload);
-        // setIsLoggedIn(true);
+        sessionStorage.setItem("token", data.payload);
+        setIsLoggedIn(true);
       });
   };
 
