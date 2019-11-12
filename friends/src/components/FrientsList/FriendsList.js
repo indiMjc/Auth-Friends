@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Friends from "../Friends/Friends";
+import AddFriend from "../AddFriend/AddFriend";
 
 const axiosWithAuth = () => {
   return axios.create({
@@ -36,7 +37,7 @@ const FriendsList = () => {
           <Friends name={friend.name} age={friend.age} email={friend.email} />
         </div>
       ))}
-      {/* <h1>test</h1> */}
+      <AddFriend />
     </>
   );
 };
