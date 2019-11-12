@@ -3,6 +3,7 @@ import { Route, Link, Switch } from "react-router-dom";
 import "./App.css";
 import LoginForm from "./components/LoginForm/LoginForm";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import FriendsList from "./components/FrientsList/FriendsList";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       </ul>
       <Switch>
         <PrivateRoute path="/protected">
-          <h1>sensitive data</h1>
+          <FriendsList />
         </PrivateRoute>
         <Route path="/login" component={LoginForm} />
       </Switch>
