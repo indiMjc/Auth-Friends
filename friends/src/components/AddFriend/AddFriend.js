@@ -1,23 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-// const axiosWithAuth = () => {
-//   return axios
-//     .create({
-//       headers: {
-//         authorization: sessionStorage.getItem("token")
-//       },
-//       username: "Lambda School",
-//       password: "i<3Lambd4"
-//     })
-//     .then(res => {
-//       console.log(res);
-//     })
-//     .catch(err => {
-//       console.log("header error", err);
-//     });
-// };
-
 const AddFriend = () => {
   const [name, setName] = useState("");
   const [age, setAge] = useState(null);
@@ -60,7 +43,7 @@ const AddFriend = () => {
     <div className="post-form">
       <form>
         <label>
-          Add New Friend:
+          <strong>Add New Friend:</strong>
           <br />
           <br />
           <input

@@ -6,7 +6,6 @@ const isAuthenticated = () => {
 };
 
 const PrivateRoute = ({ children, ...rest }) => {
-  console.log("...rest", rest);
   return (
     <Route
       {...rest}
