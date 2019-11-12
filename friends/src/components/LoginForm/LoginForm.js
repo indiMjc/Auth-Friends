@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -7,15 +8,15 @@ const LoginForm = () => {
   console.log("console.log output: LoginForm -> password", password);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  handleUserChange = e => {
+  const handleUserChange = e => {
     setUsername(e.target.value);
   };
 
-  handlePWChange = e => {
+  const handlePWChange = e => {
     setPassword(e.target.value);
   };
 
-  login = e => {
+  const login = e => {
     e.preventDefault();
     axios
       .post(`http://localhost:5000/api/login`, { username, password })

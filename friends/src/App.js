@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Link, Switch } from "react-router-dom";
 import "./App.css";
+import LoginForm from "./components/LoginForm/LoginForm";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         </li>
       </ul>
       <Switch>
-        <Route path="/login" />
+        <Route path="/login" component={LoginForm} />
       </Switch>
     </div>
   );
