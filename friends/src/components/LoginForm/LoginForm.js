@@ -3,9 +3,7 @@ import axios from "axios";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
-  console.log("console.log output: LoginForm -> username", username);
   const [password, setPassword] = useState("");
-  console.log("console.log output: LoginForm -> password", password);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleUserChange = e => {
@@ -44,12 +42,16 @@ const LoginForm = () => {
           name="username"
           value={username}
           onChange={handleUserChange}
+          placeholder="Enter username"
         />
+        <br />
+        <br />
         <input
           type="password"
           name="password"
           value={password}
           onChange={handlePWChange}
+          placeholder="Enter password"
         />
       </form>
     </div>
